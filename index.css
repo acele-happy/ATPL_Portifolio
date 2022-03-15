@@ -181,3 +181,36 @@ text-align: center;
 .fa-pencil-square-o{
     width: 200px;
 }
+
+.port-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.portifolio{
+    background: hotpink;
+    width: 50%;
+    display:grid;
+    grid-template-columns: 350px 300px;
+}
+.div1{
+    width: 400px;
+    background: blue;
+    height: 100px;
+}
+.div2{
+    width: 250px;
+    background: green;
+    height: 100px;
+}
+.div3{
+    width: 300px;
+    background: red;
+    height: 200px;
+}
+.div4{
+    width: 320px;
+    background: purple;
+    height: 200px;
+}
+
