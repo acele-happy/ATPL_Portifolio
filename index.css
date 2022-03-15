@@ -114,3 +114,70 @@ svg{
 .icons span{
     margin: 10px;
 }
+.center{
+text-align: center;
+}
+.color{
+    color: #F33052;
+    margin-top: 20px;
+}
+
+.out{
+    width: 200px;
+    height: 7px;
+    background: #888;
+    border-radius: 0px, 10px,10px,0px;
+}
+
+.inside{
+    width: 170px;
+    height: 7px;
+    background: #F33052;
+}
+
+.skills{
+    position: relative;
+    right: 80px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+}
+.services{
+    width: 400px;
+    text-align: center;
+    height: auto;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 60px;
+    left: 30px;
+}
+.services .box{
+    width: 300px;
+    box-shadow: 10px 0px 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.icon-box{
+    background: #F33052;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-pencil-square-o{
+    width: 200px;
+}
