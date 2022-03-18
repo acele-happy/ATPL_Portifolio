@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+}
+
+.left h2, .left p{
+    text-align: center;
+}
+
+.left{
+    height: 100vh;
+    width: 40%;
+    background: #390ABE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    justify-content: space-evenly;
+}
+.left p{
+    position: relative;
+    top: -50px;
+}
+/* .left span{
+    margin-left: 50px;
+} */
+.right{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.right  input{
+    display: block;
+    width: 80%;
+    background: transparent;
+    border-bottom: 2px solid #888;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+.right  button{
+    background: #390ABE;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    width: 150px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+}
+.right  textarea{
+    border-bottom: 2px solid #888;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+.fa{
+    color: #f33052;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    background: rgba(243, 48, 82,0.2);
+    border-radius: 50%;
+    
+}
+
+@media only screen and (max-width: 700px){
+    .left{
+        position: absolute;
+        width: 100%;
+    }
+    .left span, .left p{
+        display: none;
+    }
+
+    .right input{
+        color: #fff;
+        width: 150%;
+    }
+    .right textarea{
+        width: 150%;
+        background: transparent;
+        color: #fff;
+    }
+    .left h2{
+        position: absolute;
+        top: 40px;
+    }
+    .right{
+        position: absolute;
+        left: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50vh;
+        top: 130px;
+        padding: 10px;
+    }
+    .right .btn{
+        color: #390ABE;
+        background: #fff;
+    }
+    .right .btn:hover{
+        background: #5924e9;
+        color: #fff;
+    }
+}

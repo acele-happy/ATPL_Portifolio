@@ -293,4 +293,163 @@ align-items: center;
 justify-content: center;
 color: #888;
 font-size: 15px;
+margin-top: 100px;
+}
+.center>a{
+  /* margin-top: 150px; */
+  position: relative;
+  top: 50px;
+}
+
+.menu-icon{
+  display: none;
+}
+
+@media screen and (max-width: 600px){
+  .nav-links ul li:not(.menu-icon){
+    display:none;
+  }
+  .nav-links{
+    background: red;
+    width: 100%;
+    overflow: auto;
+  }
+  .nav-links ul .menu-icon {
+    float: right;
+    position: relative;
+    /* left: 180px;
+    display: block;
+    size: 100px; */
+    display: block;
+    right: 0;
+  }
+  .upper-nav{
+    display:none;
+  }
+  .short-desc{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 20%;
+  }
+  .short-desc h2{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .short-desc p {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .contact-btn{
+    margin: auto;
+    position: relative;
+    left: 40%;
+    top: 30px;
+  }
+  .dark-part{
+    height: 60vh;
+  }
+  .mid>*{
+    display: block;
+  }
+  .skills{
+    display: block;
+  }
+
+  .blogs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* padding: 10px; */
+    gap: 10px;
+  }
+  .blog{
+    width: 280px;
+  }
+  .blog img{
+    width: 280px;
+  }
+  .portifolio{
+    width: 100%;
+  }
+  .portifolio div img{
+    width: 270px;
+  }
+  .circle{
+    margin: auto;
+  }
+
+  .mid-2{
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+  .mid-2 > div{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+  }
+  .skills{
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and ( max-width: 1000px) {
+  .blogs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+  }
+  .portifolio{
+    width: 100%;
+  }
+  .nav-links ul li:not(.menu-icon){
+    display:none;
+  }
+  .menu-icon{
+    position: absolute;
+    right: 100px;
+    display: block;
+  }
+
+  .nav-links .responsive ul li {
+    float: none;
+    display: block;
+    text-align: center;
+    color: #fff;
+  }
+
+  .fa-bars{
+    font-size: 25px;
+  }
+ 
+  .dark-part{
+    height: 70vh;
+  }
+  .short-desc p{
+    width: 70%;
+  }
+  .circle {
+    width: 270px;
+    height: 270px;
+  }
+  .circle-sm {
+    width: 240px;
+    height: 240px;
+  }
+  .about{
+    width: 100%;
+  }
+
+  .mid-2 >div{
+    position: relative;
+    top: 0;
+    right: 0;
+  }
 }
