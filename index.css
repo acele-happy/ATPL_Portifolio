@@ -306,11 +306,11 @@ margin-top: 100px;
 }
 
 @media screen and (max-width: 600px){
+
   .nav-links ul li:not(.menu-icon){
     display:none;
   }
   .nav-links{
-    background: red;
     width: 100%;
     overflow: auto;
   }
@@ -327,10 +327,14 @@ margin-top: 100px;
     display:none;
   }
   .short-desc{
-    width: 90%;
+    width: 60%;
     margin: auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
     top: 20%;
+    font-size: 10px;
   }
   .short-desc h2{
     text-align: center;
@@ -360,15 +364,14 @@ margin-top: 100px;
 
   .blogs{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* padding: 10px; */
+    grid-template-columns: 1fr;
     gap: 10px;
   }
   .blog{
-    width: 280px;
+    width: 250px;
   }
   .blog img{
-    width: 280px;
+    width: 250px;
   }
   .portifolio{
     width: 100%;
@@ -395,6 +398,10 @@ margin-top: 100px;
   }
   .skills{
     margin-bottom: 40px;
+  }
+  .contact-btn{
+    position: absolute;
+    margin: auto;
   }
 }
 
