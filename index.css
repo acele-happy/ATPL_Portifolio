@@ -4,10 +4,14 @@
   box-sizing: border-box;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+a{
+  text-decoration: none;
+  color: #fff;
+}
 .dark-part {
   background: #111;
   width: 100%;
-  height: auto;
+  height: 60vh;
 }
 .upper-nav {
   width: 100%;
@@ -263,7 +267,7 @@ svg {
     box-shadow: 3px 0px 5px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
-.blog>img{
+.blog>img,.blog>a>img{
   width: 300px;
     height: 120px;
     border-radius: 10px 10px 0px 0px;
@@ -351,6 +355,11 @@ margin-top: 100px;
     position: relative;
     left: 40%;
     top: 30px;
+  }
+
+  .contact-btn>a{
+    color: #fff;
+    text-decoration: none;
   }
   .dark-part{
     height: 60vh;
