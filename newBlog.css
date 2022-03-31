@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .right input{
     outline: none;
@@ -19,4 +20,17 @@
     flex-direction: column;
     justify-content: space-between;
     margin-right:10px;
+}
+.btns{
+    display: block;
+}
+.btns button{
+    margin-top: 30px;
+    width: 100px;
+    height: 35px;
+    background: #390ABE;
+    outline: none;
+    color: #fff;
+    border:none;
+    cursor: pointer;
 }
