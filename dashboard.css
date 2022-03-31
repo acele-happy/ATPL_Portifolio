@@ -85,3 +85,17 @@ a{
 .blog-icons > span{
   margin-left: 20px;
 }
+figcaption{
+  color: lightgray;
+}
+.side-container{
+  display: flex;
+  height: 65vh;
+}
+
+.side-icons, .side-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right:10px;
+}

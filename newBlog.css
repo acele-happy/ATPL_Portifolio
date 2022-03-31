@@ -8,3 +8,15 @@
     width: 80%;
     height: 70vh;
 }
+
+.side-container{
+    display: flex;
+    height: 65vh;
+}
+
+.side-icons, .side-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right:10px;
+}
