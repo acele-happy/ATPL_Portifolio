@@ -79,6 +79,24 @@ a{
     border-radius: 50%;
     
 }
+.side-container{
+    display: flex;
+    /* height: 65vh; */
+}
+
+.side-icons, .side-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right:10px;
+}
+.side-icons>*, .side-links>*{
+    margin: 20px;
+}
+
+.login-link{
+    color: #390ABE;
+}
 
 @media only screen and (max-width: 700px){
     .left{
@@ -115,9 +133,25 @@ a{
     .right .btn{
         color: #390ABE;
         background: #fff;
+        margin-right: 60px; 
+    }
+    .right input, .right textarea{
+        margin-right: 60px; 
     }
     .right .btn:hover{
         background: #5924e9;
         color: #fff;
+    }
+    .p-mobile{
+        text-align: center;
+        width: 150%;
+        margin-right: 50px;
+        color: #888;
+    }
+    .p-mobile a{
+        color: #fff;
+    }
+    .mobile-login-link{
+        color: #390ABE;
     }
 }
