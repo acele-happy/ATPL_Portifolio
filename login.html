@@ -1,26 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="forms.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="forms.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="left">
-            <h2>LOGIN</h2>
-            <p>Welcome to your personal portifolio</p>
-            <div class="circle"></div>
+      <div class="left">
+        <h2>LOGIN</h2>
+        <p>Welcome to your personal portifolio</p>
+        <div class="circle"></div>
+        <div class="success-div" id="success"></div>
+      </div>
+      <!-- <div class="right"> -->
+      <form action="/" id="form" class="form">
+        <div class="input-ctrl">
+          <input type="email" id="Email" placeholder="Email" />
+          <div class="error"></div>
         </div>
-        <div class="right">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button class="btn" type="submit"><a href="dashboard.html" class="mobile-login-link">LOGIN</a></button>
-            <p class="p-mobile">Don't have account? <a href="signup.html" class="login-link">SIGNUP</a></p>
+        <div class="input-ctrl">
+          <input type="password" id="Password" placeholder="Password" />
+          <div class="error"></div>
         </div>
+        <button class="btn" type="submit">
+            LOGIN
+          <!-- <a href="dashboard.html" class="mobile-login-link">LOGIN</a> -->
+        </button>
+        <p class="p-mobile">
+          Don't have account?
+          <a href="signup.html" class="login-link">SIGNUP</a>
+        </p>
+        <!-- </div> -->
+      </form>
     </div>
-</body>
+    <script>
+      const form = document.getElementById("form");
+      const Email = document.getElementById("Email");
+      const Password = document.getElementById("Password");
+
+      form.addEventListener('submit',e=>{
+        e.preventDefault();
+        validateInputs();
+      })
+      
+      const setError = (element, message) => {
+        const inputControl = element.parentElement;
+        const errorDisplay = inputControl.querySelector(".error");
+      
+        errorDisplay.innerText = message;
+        inputControl.classList.add("error");
+        inputControl.classList.remove("success");
+      };
+      const setSuccess = (element) => {
+        const inputControl = element.parentElement;
+        const errorDisplay = inputControl.querySelector(".error");
+      
+        errorDisplay.innerText = "";
+        inputControl.classList.add("success");
+        inputControl.classList.remove("error");
+      };
+
+      const isValidEmail = (email) => {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      };
+      
+      let  status = true;
+      const validateInputs = () => {
+        const EmailValue = Email.value.trim();
+        const passwordValue = Password.value.trim();
+      //   const txtValue = txt.value.trim();
+      
+       if(EmailValue === '') {
+       status = false;
+        setError(Email, '*Email is required');
+      } else if (!isValidEmail(EmailValue)) {
+          status = false;
+        setError(Email, '*Provide a valid Email address');
+      } else {
+        setSuccess(Email);
+      }
+      
+      
+      if(passwordValue === '') {
+          status = false;
+        setError(Password, '*Password is required');
+      } else {
+        setSuccess(Password);
+      }
+      
+      if (status){
+         success.style.display = "flex"
+         success.style.color = "green"
+         success.innerText = "Logged In Successfully!!"
+      
+      }
+      }
+    </script>
+  </body>
 </html>

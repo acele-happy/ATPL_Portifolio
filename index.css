@@ -340,8 +340,8 @@ margin-top: 100px;
       transition: 0.3s;
       box-shadow:
           0 10px 27px rgba(0, 0, 0, 0.05);
-      height: 25vh;
-      justify-content: space-between;
+      height: 45vh;
+      justify-content: space-evenly;
       z-index: 1;
   }
   .nav-links ul.active{
@@ -350,6 +350,7 @@ margin-top: 100px;
 
   .nav-links ul li a {
     color: #111;
+    margin: 0 !important;
   }
   .hamburger {
     display: block;

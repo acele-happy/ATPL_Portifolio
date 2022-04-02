@@ -32,10 +32,8 @@ a{
     position: relative;
     top: -50px;
 }
-/* .left span{
-    margin-left: 50px;
-} */
-.right{
+
+ .form{
     width: 50%;
     height: 100vh;
     display: flex;
@@ -43,9 +41,14 @@ a{
     flex-direction: column;
     justify-content: space-evenly;
 }
-.right  input{
-    display: block;
+.input-ctrl{
     width: 80%;
+}
+
+ .form .input-ctrl input{
+    position: relative;
+    display: block;
+    width: 100%;
     background: transparent;
     border-bottom: 2px solid #888;
     border-top: none;
@@ -53,7 +56,7 @@ a{
     border-right: none;
     outline: none;
 }
-.right  button{
+ .form button{
     background: #390ABE;
     color: #fff;
     border-radius: 5px;
@@ -62,7 +65,7 @@ a{
     width: 150px;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
 }
-.right  textarea{
+ .form .input-ctrl textarea{
     border-bottom: 2px solid #888;
     border-top: none;
     border-left: none;
@@ -97,7 +100,20 @@ a{
 .login-link{
     color: #390ABE;
 }
-
+.error{
+    color: rgb(243, 42, 42);
+    /* width: 100%; */
+}
+.success-div{
+    color: #fff;
+    width: 300px;
+    height:50px;
+    background: rgb(105, 240, 105);
+    border-radius: 5px;
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
 @media only screen and (max-width: 700px){
     .left{
         position: absolute;
@@ -106,13 +122,16 @@ a{
     .left span, .left p{
         display: none;
     }
+   .form{
+       width: 100%;
+   }
 
-    .right input{
+    .form .input-ctrl input{
         color: #fff;
-        width: 150%;
+        width: 100%;
     }
-    .right textarea{
-        width: 150%;
+    .form .input-ctrl textarea{
+        width: 100%;
         background: transparent;
         color: #fff;
     }
@@ -120,9 +139,8 @@ a{
         position: absolute;
         top: 40px;
     }
-    .right{
+    .form{
         position: absolute;
-        left: 150px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -130,21 +148,21 @@ a{
         top: 130px;
         padding: 10px;
     }
-    .right .btn{
+    .form .btn{
         color: #390ABE;
         background: #fff;
         margin-right: 60px; 
     }
-    .right input, .right textarea{
+    .form .input-ctrl input, .form .input-ctrl textarea{
         margin-right: 60px; 
     }
-    .right .btn:hover{
+    .form .btn:hover{
         background: #5924e9;
         color: #fff;
     }
     .p-mobile{
         text-align: center;
-        width: 150%;
+        width: 100%;
         margin-right: 50px;
         color: #888;
     }

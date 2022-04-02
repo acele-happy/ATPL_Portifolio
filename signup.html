@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="forms.css">
-</head>
-<body>
-    <div class="container">
-        <div class="left">
-            <h2>SIGNUP</h2>
-            <p>Create Your Own Portifolio !!</p>
-             <div class="circle">
-             </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="forms.css" />
+  </head>
+  <body>
+    <div class="container" id="cont">
+      <div class="left">
+        <h2>SIGNUP</h2>
+        <p>Create Your Own Account To Acele's Portifolio!!</p>
+        <div class="circle"></div>
+        <div class="success-div" id="success"></div>
+      </div>
+      <!-- <div class="right"> -->
+      <form action="/" id="form" class="form">
+        <div class="input-ctrl" id="input-ctrl">
+          <input type="text" id="Name" placeholder="Full Name" />
+          <div class="error"></div>
         </div>
-        <div class="right">
-           <!-- <div class="row"> -->
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button class="btn" type="submit">SIGNUP</button>
-            <p class="p-mobile">Already have account? <a href="login.html" class="login-link">LOGIN</a></p>
-           <!-- </div> -->
+        <div class="input-ctrl" id="input-ctrl">
+          <input type="email" id="Email" placeholder="Email" />
+          <div class="error"></div>
         </div>
+        <div class="input-ctrl" id="input-ctrl">
+          <input type="password" id="Password" placeholder="Password" />
+          <div class="error"></div>
+        </div>
+        <button class="btn" type="submit">SIGNUP</button>
+        <p class="p-mobile">
+          Already have account?
+          <a href="login.html" class="login-link">LOGIN</a>
+        </p>
+      </form>
+      <!-- </div> -->
     </div>
-</body>
+    <script src="script.js">
+    </script>
+  </body>
 </html>
