@@ -99,3 +99,74 @@ figcaption{
   justify-content: space-between;
   margin-right:10px;
 }
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #390ABE;
+}
+.hamburger{
+  display:none;
+}
+
+@media only screen and (max-width: 700px){
+  .left{
+    width: 80%;
+    position: fixed;
+    left: -100%;
+    transition: 0.3s;
+    height: 100vh;
+  }
+  .left.active{
+    left: 0;
+    
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index:1;
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background:#f33052;
+    z-index: 1 !important;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background:#f33052;
+    z-index: 1 !important;
+}
+.right div{
+  display: flex;
+  flex-direction: column;
+}
+.hamburger{
+  position: relative;
+  left:70px;
+}
+.blog{
+  width: 70%;
+}
+.blog-icons span{
+  margin: 0;
+  display: none;
+}
+.blog-icons{
+  display: none;
+  background: red;
+  width: 70px;
+  flex-direction: column-reverse;
+
+}
+.blog img{
+  width: 100%;
+}
+}

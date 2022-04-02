@@ -11,6 +11,11 @@
   </head>
   <body>
     <div class="container">
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <div class="left">
             <div class="profile">
                 <img src="./pictures/pic.jpg" alt="">
@@ -115,9 +120,17 @@
                         </div>
         </div>
     </div>
-
-    <!-- <div class="footer">
-        <p>&copy; acele happy, all right reserved.</p>
-    </div> -->
+    
+    <script>
+        const hamburger= document.querySelector('.hamburger')
+        const left = document.querySelector('.left')
+        const right = document.querySelector('.right')
+        hamburger.addEventListener('click',mobileMenu)
+    function mobileMenu(){
+       hamburger.classList.toggle('active')
+       left.classList.toggle('active')
+       right.classList.toggle('active')
+   }
+    </script>
   </body>
 </html>

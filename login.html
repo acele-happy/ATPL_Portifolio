@@ -96,13 +96,11 @@
       } else {
         setSuccess(Password);
       }
-      
-      if (status){
-         success.style.display = "flex"
-         success.style.color = "green"
-         success.innerText = "Logged In Successfully!!"
-      
+
+      if(status){
+          window.location.replace("dashboard.html");
       }
+      
       }
     </script>
   </body>

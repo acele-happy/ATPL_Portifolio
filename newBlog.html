@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="newBlog.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-   <div class="container">
-    <div class="left">
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="newBlog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
         <div class="profile">
-            <img src="./pictures/pic.jpg" alt="" />
-            <figcaption>Acele Happy</figcaption>
-
+          <img src="./pictures/pic.jpg" alt="" />
+          <figcaption>Acele Happy</figcaption>
         </div>
-       <div class="side-container">
-           <div class="side-icons">
+        <div class="side-container">
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <div class="side-icons">
             <span><i class="fa fa-home" aria-hidden="true"></i></span>
             <span><i class="fa fa-plus" aria-hidden="true"></i></span>
             <span><i class="fa fa-moon-o" aria-hidden="true"></i></span>
             <span><i class="fa fa-sign-out" aria-hidden="true"></i></span>
-           </div>
-        <div class="side-links">
+          </div>
+          <div class="side-links">
             <span><a href="dashboard.html">Home</a></span>
             <span>New Blog</span>
             <span>Dark</span>
             <span><a href="login.html">Logout</a></span>
+          </div>
         </div>
-       </div>
-    </div>
-    <div class="right">
-        <input type="text" placeholder="Title" id="title">
-        <div><span>Blog Picture:  </span><input type="file" id="pic"></div>
-        <textarea name="content" placeholder="Write Blog Content Here" id="content" cols="100" rows="20"></textarea>
+      </div>
+      <div class="right">
+        <input type="text" placeholder="Title" id="title" />
+        <div><span>Blog Picture: </span><input type="file" id="pic" /></div>
+        <textarea
+          name="content"
+          placeholder="Write Blog Content Here"
+          id="content"
+          cols="100"
+          rows="20"
+        ></textarea>
         <div class="btns">
-            <button type="submit">Save</button>
-            <button type="submit">Publish</button>
-            <button type="submit">Reset</button>
+          <button type="submit">Save</button>
+          <button type="submit">Publish</button>
+          <button type="submit">Reset</button>
         </div>
+      </div>
     </div>
-   </div>
-</body>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const left = document.querySelector(".left");
+      const right = document.querySelector(".right");
+      hamburger.addEventListener("click", mobileMenu);
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        left.classList.toggle("active");
+        right.classList.toggle("active");
+      }
+    </script>
+  </body>
 </html>
