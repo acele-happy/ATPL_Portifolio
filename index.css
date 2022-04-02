@@ -26,12 +26,20 @@ a{
   margin-left: 20px;
   color: #fff;
 }
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger{
+  display:none;
+}
 
 .nav-links ul {
   list-style: none;
   display: flex;
-  width: 40%;
-  float: right;
+  align-items: center;
+  margin-right: 20px;
 }
 .nav-links ul li {
   color: #fff;
@@ -40,8 +48,7 @@ a{
 }
 .logo {
   color: #fff;
-  margin-left: 100px;
-  margin-top: 100px;
+  margin-left: 20px;
 }
 .login {
   border-bottom: 2px solid #f33052;
@@ -53,6 +60,7 @@ a{
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 100px;
+  border: none;
 }
 .short-desc {
   margin-top: 50px;
@@ -220,7 +228,6 @@ svg {
   padding: 10px;
 }
 .portifolio > div {
-  /* background: purple; */
   padding: 20px 0;
   display: flex;
   align-items: center;
@@ -305,33 +312,70 @@ margin-top: 100px;
   top: 50px;
 }
 
-.menu-icon{
-  display: none;
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
 
-  .nav-links ul li:not(.menu-icon){
-    display:none;
-  }
   .nav-links{
-    width: 100%;
-    overflow: auto;
+    align-items: center;
   }
-  .nav-links ul .menu-icon {
-    float: right;
-    position: relative;
-    /* left: 180px;
-    display: block;
-    size: 100px; */
-    display: block;
-    right: 0;
+  .hamburger{
+    margin-right: 10px;
   }
+  .nav-links ul{
+      position: fixed;
+      left: -100%;
+      flex-direction: column;
+      background-color: #fff;
+      width: 90%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+      height: 25vh;
+      justify-content: space-between;
+      z-index: 1;
+  }
+  .nav-links ul.active{
+    left:0;
+  }
+
+  .nav-links ul li a {
+    color: #111;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background:#f33052;
+    z-index: 1 !important;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background:#f33052;
+    z-index: 1 !important;
+}
+
   .upper-nav{
     display:none;
   }
   .short-desc{
-    width: 60%;
+    width: 100%;
     margin: auto;
     position: relative;
     display: flex;
@@ -339,6 +383,10 @@ margin-top: 100px;
     align-items:center;
     top: 20%;
     font-size: 10px;
+    height: 30vh;
+  }
+  .short-desc>*{
+    font-size: 20px;
   }
   .short-desc h2{
     text-align: center;
@@ -350,11 +398,17 @@ margin-top: 100px;
     text-align: center;
   }
 
-  .contact-btn{
+  .about-content{
     margin: auto;
-    position: relative;
-    left: 40%;
-    top: 30px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .contact-btn{
+    position: absolute;
+    left: 35%;
+    top: 270px;
   }
 
   .contact-btn>a{
@@ -371,23 +425,20 @@ margin-top: 100px;
     display: block;
   }
 
+  .portifolio {
+    display: flex;
+    flex-direction: column;
+  }
   .blogs{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+   display: grid;
+   grid-template-columns: 1fr;
   }
   .blog{
-    width: 250px;
+   position: relative;
+   left: 50px;
+   margin-bottom: 15px;
   }
-  .blog img{
-    width: 250px;
-  }
-  .portifolio{
-    width: 100%;
-  }
-  .portifolio div img{
-    width: 270px;
-  }
+
   .circle{
     margin: auto;
   }
@@ -414,7 +465,7 @@ margin-top: 100px;
   }
 }
 
-@media screen and ( max-width: 1000px) {
+@media only screen and  (min-width: 701px) and (max-width: 1000px) {
   .blogs{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -424,14 +475,6 @@ margin-top: 100px;
   }
   .portifolio{
     width: 100%;
-  }
-  .nav-links ul li:not(.menu-icon){
-    display:none;
-  }
-  .menu-icon{
-    position: absolute;
-    right: 100px;
-    display: block;
   }
 
   .nav-links .responsive ul li {

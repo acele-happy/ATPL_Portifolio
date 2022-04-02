@@ -107,3 +107,33 @@
     margin-left: 50px;
     margin-top: 40px;
 }
+
+@media screen and (max-width: 700px) {
+    .lower{
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+    }
+    .div> img{
+        width: 100%;
+    }
+    .side-icons span{
+        width: 20px;
+        height: 20px;
+    }
+    .side-icons{
+        position: relative;
+        top: -30px;
+    }
+    .other-b{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .comment input, .comment textarea{
+        width: 100%;
+    }
+    .back{
+        color: #000;
+    }
+}
