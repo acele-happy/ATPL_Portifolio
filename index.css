@@ -294,6 +294,10 @@ svg {
   margin-left: 20px;
 }
 
+.more{
+  color: #888;
+}
+
 .footer{
 background: #111;
 /* position: absolute; */
@@ -323,7 +327,6 @@ margin-top: 100px;
 }
 
 @media screen and (max-width: 700px){
-
   .nav-links{
     align-items: center;
   }
@@ -335,14 +338,16 @@ margin-top: 100px;
       left: -100%;
       flex-direction: column;
       background-color: #fff;
-      width: 90%;
+      width: 100%;
       text-align: center;
       transition: 0.3s;
       box-shadow:
           0 10px 27px rgba(0, 0, 0, 0.05);
-      height: 45vh;
+      height: 50vh;
       justify-content: space-evenly;
       z-index: 1;
+      /* margin-top: 50px */
+      top: 0;
   }
   .nav-links ul.active{
     left:0;
@@ -351,10 +356,12 @@ margin-top: 100px;
   .nav-links ul li a {
     color: #111;
     margin: 0 !important;
+    padding: 0 !important;
   }
   .hamburger {
     display: block;
     cursor: pointer;
+    z-index: 1 !important;
 }
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -408,8 +415,8 @@ margin-top: 100px;
 
   .contact-btn{
     position: absolute;
-    left: 35%;
-    top: 270px;
+    left: 40%;
+    top: 210px;
   }
 
   .contact-btn>a{
@@ -432,11 +439,11 @@ margin-top: 100px;
   }
   .blogs{
    display: grid;
-   grid-template-columns: 1fr;
+   grid-template-columns: 1fr 1fr;
   }
   .blog{
    position: relative;
-   left: 50px;
+   left: 10px;
    margin-bottom: 15px;
   }
 
