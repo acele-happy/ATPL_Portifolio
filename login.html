@@ -73,31 +73,34 @@
         return re.test(String(email).toLowerCase());
       };
       
-      let  status = true;
+      let  estatus = true;
+      let pstatus = true;
       const validateInputs = () => {
         const EmailValue = Email.value.trim();
         const passwordValue = Password.value.trim();
       //   const txtValue = txt.value.trim();
       
        if(EmailValue === '') {
-       status = false;
+       estatus = false;
         setError(Email, '*Email is required');
       } else if (!isValidEmail(EmailValue)) {
-          status = false;
+          estatus = false;
         setError(Email, '*Provide a valid Email address');
       } else {
         setSuccess(Email);
+        estatus= true
       }
       
       
       if(passwordValue === '') {
-          status = false;
+          pstatus = false;
         setError(Password, '*Password is required');
       } else {
         setSuccess(Password);
+        pstatus=true
       }
 
-      if(status){
+      if(estatus && pstatus){
           window.location.replace("dashboard.html");
       }
       
